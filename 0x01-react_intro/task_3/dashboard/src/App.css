@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 20vmin;
+}
+
+.App-header {
+  display: flex;
+  color: red;
+  align-items: center;
+}
+
+.App-body {
+  height: 500px;
+  border-top: 5px solid red;
+  border-bottom: 5px solid red;
+  padding: 5rem;
+}
+
+.App-footer {
+  display: flex;
+  justify-content: center;
+}
