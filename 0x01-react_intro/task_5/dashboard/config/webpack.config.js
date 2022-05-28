@@ -1,3 +1,10 @@
+const filePath = path.join(__dirname, './public/js/');
+const fileName = 'bundle.js';
+const PATHS = {
+  src: path.join(__dirname, './src/'),
+  dist: path.join(__dirname, 'public'),
+};
+
 module.exports = {
   devtool: 'inline-source-map',
   entry: './src/index.js',
@@ -12,6 +19,10 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
     ],
+  },
+  watch: true,
+  watchOptions: {
+    ignored: '/node_modules/',
   },
   rules: [
     {
@@ -28,4 +39,11 @@ module.exports = {
       ],
     },
   ],
+  devServer: {
+    contentBase: PATHS.dist,
+    compress: false,
+    historyApiFallback: true,
+    hot: true,
+    port: 3000,
+  },
 };
