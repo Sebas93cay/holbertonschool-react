@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.App-body {
+  height: 500px;
+  border-top: 5px solid red;
+  border-bottom: 5px solid red;
+  padding: 5rem;
+}
