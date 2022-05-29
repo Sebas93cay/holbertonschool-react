@@ -1,6 +1,6 @@
 import React from 'react';
 import './Notifications.css';
-import { getLatestNotifications } from './utils';
+import { getLatestNotifications } from '../utils/utils';
 
 export const Notifications = () => {
   const closeNotifications = () => {

@@ -1,16 +1,10 @@
-const filePath = path.join(__dirname, './public/js/');
-const fileName = 'bundle.js';
-const PATHS = {
-  src: path.join(__dirname, './src/'),
-  dist: path.join(__dirname, 'public'),
-};
-
+const path = require('path');
 module.exports = {
   devtool: 'inline-source-map',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
   },
   module: {
     rules: [
@@ -50,7 +44,7 @@ module.exports = {
     ignored: '/node_modules/',
   },
   devServer: {
-    contentBase: PATHS.dist,
+    static: path.join(__dirname, '../dist'),
     compress: false,
     historyApiFallback: true,
     hot: true,
