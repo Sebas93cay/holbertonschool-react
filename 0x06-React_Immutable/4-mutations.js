@@ -7,8 +7,6 @@ export const map = new Map({
   6: 'Lucas',
 });
 
-const map2 = new Map(map);
-map2.set(2, 'Benjamin');
-map2.set(4, 'Oliver');
-
-export { map2 };
+export const map2 = map.withMutations((mapItem) => {
+  mapItem.set(2, 'Benjamin').set(4, 'Oliver');
+});
